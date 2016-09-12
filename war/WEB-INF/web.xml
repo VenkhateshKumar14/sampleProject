@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Sample_project</servlet-name>
+		<servlet-class>com.sample.project.Sample_projectServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Sample_project</servlet-name>
+		<url-pattern>/sample_project</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Add Customer</servlet-name>
+		<servlet-class>com.sample.project.addServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Add Customer</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Update Customer</servlet-name>
+		<servlet-class>com.sample.project.updateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Update Customer</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Delete Customer</servlet-name>
+		<servlet-class>com.sample.project.deleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Delete Customer</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Display Customer</servlet-name>
+		<servlet-class>com.sample.project.displayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Display Customer</servlet-name>
+		<url-pattern>/display</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
