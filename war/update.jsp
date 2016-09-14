@@ -7,18 +7,19 @@
 <title>Insert title here</title>
 <script src="javascript/validate.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="javascript/jquery-3.1.0.js"></script>
 </head>
-<body>
+<body onload="refresh()">
 	<form onsubmit="return validate()" method="post" action="/update">
-		Enter Id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="text" id="eid" name="eid"><br>
-		Enter User name :&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="text" id="name" name="name"><br>
-		Enter password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="password" id="pass" name="pass"><br>
+		<label>Enter Id :</label> 
+		<input type="text" name="eid" id="eid" onkeypress="return checkId();" align="right"><br>
+		<label>Enter User name :</label>
+		<input type="text" name="name" id="name" align="right"><br>
+		<label>Enter password :</label> 
+		<input type="password" name="pass" id="pass" align="right"><br>
 		<input type="submit" value="Update User">
-		<p id="addError"></p>
-		<p>${updateMessage}</p>
+		<span id="addError"></span>
+		<span id="servletMessage">${updateMessage}</span>
 	</form>
 </body>
 </html>

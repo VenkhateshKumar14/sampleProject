@@ -25,20 +25,22 @@
 </style>
 <script src="javascript/jquery-3.1.0.js"></script>
 <script>
-	/* $(document).ready(function(){
+	 /* $(document).ready(function(){
 		var table="";
 		$.ajax({
 			url:"/display",
 			type:"post",
 			datatype:"json",
 			success:function(data){
+				console.log(data);
+				 var data=JSON.parse(data); 
 				for(var i=0;i<data.length;i++) {
 					table+="<tr><td>"+data[i].eid+"</td><td>"+data[i].name+"</td><td>"+data[i].password+"</td></tr>";
 				}
 				$("#tableId").append(table);
 			}
 		});
-	}); */
+	});  */
 </script>
 </head>
 <body>

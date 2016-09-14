@@ -3,23 +3,52 @@ function validate() {
 	var name = document.getElementById("name");
 	var pass = document.getElementById("pass");
 	var error = document.getElementById("addError");
+	var servletMessage = document.getElementById("servletMessage");
+	servletMessage.style.display = "none";
 	if(eid.value == ""){
-		error.style.display = "block";
-		error.innerHTML = "id is required";
+		$("#addError").html("id is required");
 		eid.focus();
+		$("#addError").fadeIn();
+		setTimeout(function() {
+			$("#addError").fadeOut();
+			}, 1000);
 		return false;
 	}
 	else if(name.value == "") {
-		error.innerHTML = "name is required";
+		$("#addError").html("name is required");
 		name.focus();
+		$("#addError").fadeIn();
+		setTimeout(function() {
+			$("#addError").fadeOut();
+			}, 1000);
 		return false;
 	}
 	else if(pass.value == "") {
-		error.innerHTML ="password is required";
+		$("#addError").html("password is required");
 		pass.focus();
+		$("#addError").fadeIn();
+		setTimeout(function() {
+			$("#addError").fadeOut();
+			}, 1000);
 		return false;
 	}
 	else {
 		error.innerHTML = "";
+	}
+}
+function checkId()
+{
+    var key=event.keyCode;
+    if (!(key > 31 && (key < 48 || key > 57))) {
+        return true;
+    }
+    return false;
+}
+function refresh() {
+	if(servletMessage.innerHTML == ""){
+		servletMessage.style.display = "none";
+	}
+	if(servletMessage.innerHTML != "") {
+		$("#servletMessage").fadeIn();
 	}
 }

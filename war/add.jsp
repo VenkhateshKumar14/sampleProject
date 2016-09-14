@@ -7,20 +7,21 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src="javascript/validate.js"></script>
+<script src="javascript/jquery-3.1.0.js"></script>
 <style>
 </style>
 </head>
-<body>
+<body onload="refresh()">
 	<form action="/add" method="post" onsubmit="return validate()">
-		Enter Id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="text" name="eid" id="eid"><br>
-		Enter User name :&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="text" name="name" id="name"><br>
-		Enter password : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="password" name="pass" id="pass"><br>
+		<label>Enter Id :</label> 
+		<input type="text" name="eid" id="eid" onkeypress="return checkId();" align="right"><br>
+		<label>Enter User name :</label>
+		<input type="text" name="name" id="name" align="right"><br>
+		<label>Enter password :</label> 
+		<input type="password" name="pass" id="pass" align="right"><br>
 		<input type="submit" value="Add User">
-		<p id="addError"></p>
-		<p>${errorMessage}</p>
+		<span id="addError"></span>
+		<span id="servletMessage">${errorMessage}</span>
 	</form>
 </body>
 </html>
